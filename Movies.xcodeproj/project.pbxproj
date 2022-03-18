@@ -18,6 +18,8 @@
 		65F83D0B2627317800542CF2 /* MoviesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F83D0A2627317800542CF2 /* MoviesViewModel.swift */; };
 		65F83D10262731F500542CF2 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F83D0F262731F500542CF2 /* MovieCell.swift */; };
 		65F83D182627360A00542CF2 /* MoviesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F83D172627360A00542CF2 /* MoviesResponse.swift */; };
+		B46089BA27E4FD7800C0231F /* MovieEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46089B927E4FD7800C0231F /* MovieEndpoints.swift */; };
+		B46089BC27E502EE00C0231F /* Environments.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46089BB27E502EE00C0231F /* Environments.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,8 @@
 		65F83D0A2627317800542CF2 /* MoviesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesViewModel.swift; sourceTree = "<group>"; };
 		65F83D0F262731F500542CF2 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 		65F83D172627360A00542CF2 /* MoviesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesResponse.swift; sourceTree = "<group>"; };
+		B46089B927E4FD7800C0231F /* MovieEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieEndpoints.swift; sourceTree = "<group>"; };
+		B46089BB27E502EE00C0231F /* Environments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environments.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,7 @@
 		65F83CF226272B7800542CF2 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				B46089BD27E5044E00C0231F /* Environments */,
 				65F83CFE26272FB400542CF2 /* Service */,
 				65F83CFD26272F9F00542CF2 /* Models */,
 				65F83CF326272E5B00542CF2 /* Controller */,
@@ -147,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				65F83CFF26272FCF00542CF2 /* MovieService.swift */,
+				B46089B927E4FD7800C0231F /* MovieEndpoints.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -165,6 +171,14 @@
 				65F83D0F262731F500542CF2 /* MovieCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		B46089BD27E5044E00C0231F /* Environments */ = {
+			isa = PBXGroup;
+			children = (
+				B46089BB27E502EE00C0231F /* Environments.swift */,
+			);
+			path = Environments;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,6 +282,8 @@
 			files = (
 				65F83D10262731F500542CF2 /* MovieCell.swift in Sources */,
 				65F83D182627360A00542CF2 /* MoviesResponse.swift in Sources */,
+				B46089BA27E4FD7800C0231F /* MovieEndpoints.swift in Sources */,
+				B46089BC27E502EE00C0231F /* Environments.swift in Sources */,
 				65F83CB52627270600542CF2 /* AppDelegate.swift in Sources */,
 				65F83D0B2627317800542CF2 /* MoviesViewModel.swift in Sources */,
 				65F83CB72627270600542CF2 /* SceneDelegate.swift in Sources */,

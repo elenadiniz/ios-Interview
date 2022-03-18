@@ -32,6 +32,15 @@ class MovieCell: UITableViewCell {
 
         configureViews()
     }
+    
+    func  passData(title: String, image: URL) {
+        movieTitleLabel.text = title
+        do {
+            let data = try Data(contentsOf: image)
+            let dataImage = UIImage(data: data)
+            movieImage.image = dataImage
+        } catch _ {}
+    }
 
     func configureViews() {
         contentView.addSubview(movieImage)

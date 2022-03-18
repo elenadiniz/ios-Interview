@@ -49,7 +49,8 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         viewModel = MoviesViewModel()
         configureViews()
 
-        navigationController?.title = "Filmes Populares"
+        title = "Filmes Populares"
+        navigationController?.navigationBar.prefersLargeTitles = true
 
         loadData()
     }
@@ -68,16 +69,16 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
     func loadData() {
         viewModel.loadContacts { movies, error in
             DispatchQueue.main.async {
-                if let error = error {
-                    print(error)
-
-                    let alert = UIAlertController(title: "Ops, ocorreu um erro", message: error.localizedDescription, preferredStyle: .alert)
+                guard let movies = movies else {
+                    
+                    let alert = UIAlertController(title: "Ops, ocorreu um erro", message: error?.localizedDescription, preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
                     self.present(alert, animated: true)
+                    
                     return
                 }
 
-                self.movies = movies ?? []
+                self.movies = movies
                 self.tableView.reloadData()
                 self.activity.stopAnimating()
             }
@@ -94,13 +95,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         }
 
         let movie = movies[indexPath.row]
-        cell.movieTitleLabel.text = movie.title
-
-        do {
-            let data = try Data(contentsOf: movie.posterURL)
-            let image = UIImage(data: data)
-            cell.movieImage.image = image
-        } catch _ {}
+        cell.passData(title: movie.title, image: movie.posterURL)
 
         return cell
     }

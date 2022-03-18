@@ -5,8 +5,6 @@
 
 import Foundation
 
-private let apiURL = "https://api.themoviedb.org/3/movie/popular?api_key=12936d62fffd31723a5b1cca14af9929"
-
 /*
  Json Contract
  {
@@ -38,7 +36,7 @@ private let apiURL = "https://api.themoviedb.org/3/movie/popular?api_key=12936d6
 class MovieService {
 
     func fetchMovies(completion: @escaping ([Movie]?, Error?) -> Void) {
-        guard let api = URL(string: apiURL) else {
+        guard let api = URL(string: MovieEndpoints.downloadAPI) else {
             return
         }
 
